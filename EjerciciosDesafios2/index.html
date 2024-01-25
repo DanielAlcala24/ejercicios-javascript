@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>practica web js 2</title>
+    </head>
+    <body>
+        <h1></h1>
+        <p id="peso"></p>
+        <input type="text" id="recoger_peso" oninput="habilitarBoton();">
+        <p id="altura"></p>
+        <input type="text" id="recoger_altura" oninput="habilitarBoton();">
+        
+        <button onclick="IMC();" id="calcularIMC" disabled>calcular IMC</button>
+        <button onclick="reiniciarValores();">reiniciar valores</button>
+
+        <p id="resultado"></p>
+
+        <script src="scripts.js"></script>
+    </body>
+</html>
