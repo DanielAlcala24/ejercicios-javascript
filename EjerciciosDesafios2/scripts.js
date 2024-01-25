@@ -19,11 +19,12 @@ function textosHTML() {
 function IMC() {
     let pesoAsignado = parseFloat(document.getElementById('recoger_peso').value);
     let alturaAsignada = parseFloat(document.getElementById('recoger_altura').value);
-    let imcTotal = pesoAsignado / alturaAsignada;
+    let imcTotal = pesoAsignado / Math.pow(alturaAsignada, 2);
+    let imcConUnDecimal = imcTotal.toFixed(1);
     if (isNaN(imcTotal)) {
         asignarTextos('#resultado', 'porfavor coloca valores numérico');
     } else {
-        asignarTextos('#resultado', `el imc es de ${imcTotal}`);
+        asignarTextos('#resultado', `el imc es de ${imcConUnDecimal}`);
     }
     return;
 }
